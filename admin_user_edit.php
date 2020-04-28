@@ -6,10 +6,10 @@ check_admin();
 
 $user_id = $_GET['user_id'];
 
-$sql = "select * from users where id='{$user_id}'";
+$sql = "select * from `users` where id='{$user_id}'";
 $select_user = sql_select($sql);
 
-$sql = "select * from admins where user_id='{$user_id}'";
+$sql = "select * from `admins` where user_id='{$user_id}'";
 $select_power = sql_select($sql);
 $i = 0;
 $modules=[];
@@ -28,7 +28,7 @@ $lunch_check = (in_array('lunch',$modules))?"checked":"";
 $reward_check = (in_array('reward',$modules))?"checked":"";
 $sport_check = (in_array('sport',$modules))?"checked":"";
 
-$sql = "select * from groups where user_id='{$user_id}'";
+$sql = "select * from `groups` where user_id='{$user_id}'";
 $select_group = sql_select($sql);
 $i = 0;
 $groups=[];
