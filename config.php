@@ -3,15 +3,8 @@ ini_set('display_errors','on');
 //引入檔案
 require_once('function.php');
 
-//須至 cloudschool API 設定那裡取得以下兩項
-$API_client_id='9082f708e2c17cd259cdcc56d604f8e8';//貴校API的帳號
-$API_client_secret='6fb52349a422f34d1b45c98ba492c9b5';//貴校API的密碼
 
-$UPLOAD_PATH = "upload/";
-
-
-$connection = new PDO('mysql:host=localhost;dbname=ehdes;charset=utf8', 'root', 'wang1026');
-
+require_once ('env.php');
 
 
 
